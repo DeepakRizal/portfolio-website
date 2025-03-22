@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* fonts  */
+  --font-body: "Josefin Sans", sans-serif;
+  --font-special: "Roboto", sans-serif;
+
+  /* colors  */
+  --color-brown: "#53423e";
+  --color-lightBrown: "#645550";
+  --color-darkBrown: "#2d2421";
+  --color-black: "#1e1917";
+  --color-white: "#f1e1d9";
+  --color-cyan: "#5fcfdd";
+  --color-lightCyan: "#88e5f0";
+  --color-darkCyan: "#009fb3";
+  --color-orange: "#f0a94f";
+  --color-lightOrange: "#fac27b";
+  --color-darkOrange: "#d28422";
+  --color-grey: "#626965";
+  --color-lightGrey: "#8a938e";
+  --color-darkGrey: "#3f4441";
+}
+
+body {
+  background-color: #2d2421;
+}
