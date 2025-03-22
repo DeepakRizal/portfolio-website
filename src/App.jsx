@@ -3,6 +3,10 @@ import NavbarMain from "./components/navbar/NavbarMain";
 import HeroMain from "./components/herosection/HeroMain";
 import HeroGradiant from "./components/herosection/HeroGradiant";
 import SubHeroSection from "./components/herosection/SubHeroSection";
+import AboutMeMain from "./components/aboutMeSection/AboutMeMain";
+import HelperSection from "./components/HelperSection";
+import SkillsMain from "./components/skillssection/SkillsMain";
+import SubSkill from "./components/skillssection/SubSkill";
 
 const App = () => {
   return (
@@ -11,6 +15,10 @@ const App = () => {
       <HeroMain />
       <HeroGradiant />
       <SubHeroSection />
+      <AboutMeMain />
+      <SkillsMain />
+      <SubSkill />
+      <HelperSection />
     </main>
   );
 };
