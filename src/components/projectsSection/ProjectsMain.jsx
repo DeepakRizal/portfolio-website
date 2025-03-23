@@ -10,22 +10,22 @@ const projects = [
     name: "Notes App",
     year: "2025",
     align: "right",
-    image: "../../public/images/website-img-1.jpg",
-    link: "#",
+    image: "/public/images/website-img-1.jpg",
+    link: "https://deepakrizal.github.io/Notes-app/",
   },
   {
     name: "Real Estate web app",
     year: "2023",
     align: "left",
-    image: "../../public/images/website-img-2.webp",
-    link: "#",
+    image: "/images/website-img-2.webp",
+    link: "https://github.com/DeepakRizal/estate-app",
   },
   {
     name: "Ecommerce product page",
     year: "2024",
     align: "right",
-    image: "../../public/images/website-img-4.jpg",
-    link: "#",
+    image: "/images/website-img-4.jpg",
+    link: "https://deepakrizal.github.io/Ecommerce-product-page-frontend/",
   },
 ];
 
@@ -53,6 +53,7 @@ const ProjectsMain = () => {
               year={item.year}
               image={item.image}
               align={item.align}
+              link={item.link}
             />
           );
         })}

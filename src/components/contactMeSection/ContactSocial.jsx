@@ -6,8 +6,14 @@ import { FiTwitter } from "react-icons/fi";
 const ContactSocial = () => {
   return (
     <div className="flex gap-4">
-      <SingleContactSocial link={"#"} Icon={FiGithub} />
-      <SingleContactSocial link={"#"} Icon={FiTwitter} />
+      <SingleContactSocial
+        link={"https://github.com/DeepakRizal"}
+        Icon={FiGithub}
+      />
+      <SingleContactSocial
+        link={"https://x.com/DeepakRiza1"}
+        Icon={FiTwitter}
+      />
     </div>
   );
 };

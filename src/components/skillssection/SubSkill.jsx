@@ -7,7 +7,7 @@ const SubSkill = () => {
         className=" absolute bg-gradient-to-r from-orange to-cyan opacity-50 w-full h-full
       "
       ></div>
-      <img src="../../images/subSkills.jpg" alt="Sub skills Image" />
+      <img src="/images/subSkills.jpg" alt="Sub skills Image" />
     </div>
   );
 };

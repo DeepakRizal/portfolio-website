@@ -6,7 +6,7 @@ const AboutMeImage = () => {
       <div className="h-[500px] w-[300px] rounded-[100px] absolute overflow-hidden">
         <img
           className="h-full w-auto object-cover"
-          src="../../public/images/about-me.jpg"
+          src="/images/about-me.jpg"
           alt="About Me Image"
         />
       </div>
