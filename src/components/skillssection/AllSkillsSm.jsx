@@ -1,9 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { FaCss3Alt, FaHtml5, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiNextdotjs, SiRedux, SiTypescript } from "react-icons/si";
-import SingleSkill from "./SingleSkill";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../framerMotion/variants";
 
 const skills = [
   { skill: "HTML", icon: FaHtml5 },
@@ -42,10 +44,20 @@ const AllSkillsSm = () => {
     <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-2 my-12">
       {skills.map((item, index) => {
         return (
-          <div className="flex flex-col items-center" key={index}>
+          <motion.div
+            variants={fadeIn("up", 0.7)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{
+              once: false,
+              amount: 0,
+            }}
+            className="flex flex-col items-center"
+            key={index}
+          >
             <item.icon className="text-7xl text-orange" />
             <p className="text-center mt-4 text-white">{item.skill}</p>
-          </div>
+          </motion.div>
         );
       })}
     </div>
