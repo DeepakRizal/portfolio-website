@@ -7,6 +7,7 @@ import AboutMeMain from "./components/aboutMeSection/AboutMeMain";
 import HelperSection from "./components/HelperSection";
 import SkillsMain from "./components/skillssection/SkillsMain";
 import SubSkill from "./components/skillssection/SubSkill";
+import ProjectsMain from "./components/projectsSection/ProjectsMain";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <AboutMeMain />
       <SkillsMain />
       <SubSkill />
+      <ProjectsMain />
       <HelperSection />
     </main>
   );
