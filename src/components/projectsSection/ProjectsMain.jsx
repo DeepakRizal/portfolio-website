@@ -10,7 +10,7 @@ const projects = [
     name: "Notes App",
     year: "2025",
     align: "right",
-    image: "/public/images/website-img-1.jpg",
+    image: "/images/website-img-1.jpg",
     link: "https://deepakrizal.github.io/Notes-app/",
   },
   {
