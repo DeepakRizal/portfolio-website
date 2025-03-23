@@ -9,6 +9,7 @@ import SkillsMain from "./components/skillssection/SkillsMain";
 import SubSkill from "./components/skillssection/SubSkill";
 import ProjectsMain from "./components/projectsSection/ProjectsMain";
 import ContactMeMain from "./components/contactMeSection/ContactMeMain";
+import FooterMain from "./components/footer/FooterMain";
 
 const App = () => {
   return (
@@ -22,7 +23,7 @@ const App = () => {
       <SubSkill />
       <ProjectsMain />
       <ContactMeMain />
-      <HelperSection />
+      <FooterMain />
     </main>
   );
 };
