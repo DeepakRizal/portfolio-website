@@ -5,18 +5,32 @@ const links = [
   {
     link: "About me",
     section: "about",
+    isExternal: false,
   },
   {
     link: "Skills",
     section: "skills",
+    isExternal: false,
+  },
+  {
+    link: "Experience",
+    section: "experience",
+    isExternal: false,
   },
   {
     link: "Projects",
     section: "projects",
+    isExternal: false,
+  },
+  {
+    link: "Resume",
+    section: "https://drive.google.com/file/d/1zr-qkHVvJcleq6oti0_-oez71wpvisU8/view?usp=sharing",
+    isExternal: true,
   },
   {
     link: "Contact",
     section: "contact",
+    isExternal: false,
   },
 ];
 
@@ -26,16 +40,27 @@ const NavbarLinks = () => {
       {links.map((link, index) => {
         return (
           <li key={index} className="group">
-            <Link
-              to={link.section}
-              smooth={true}
-              spy={true}
-              duration={500}
-              offset={-100}
-              className="cursor-pointer hover:text-cyan text-white transition-all duration-500"
-            >
-              {link.link}
-            </Link>
+            {link.isExternal ? (
+              <a
+                href={link.section}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer hover:text-cyan text-white transition-all duration-500"
+              >
+                {link.link}
+              </a>
+            ) : (
+              <Link
+                to={link.section}
+                smooth={true}
+                spy={true}
+                duration={500}
+                offset={-100}
+                className="cursor-pointer hover:text-cyan text-white transition-all duration-500"
+              >
+                {link.link}
+              </Link>
+            )}
             <div className="mx-auto bg-cyan w-0 h-[1px] group-hover:w-full transition-all duration-500"></div>
           </li>
         );
