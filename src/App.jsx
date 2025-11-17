@@ -7,6 +7,7 @@ import AboutMeMain from "./components/aboutMeSection/AboutMeMain";
 import HelperSection from "./components/HelperSection";
 import SkillsMain from "./components/skillssection/SkillsMain";
 import SubSkill from "./components/skillssection/SubSkill";
+import ExperienceMain from "./components/experienceSection/ExperienceMain";
 import ProjectsMain from "./components/projectsSection/ProjectsMain";
 import ContactMeMain from "./components/contactMeSection/ContactMeMain";
 import FooterMain from "./components/footer/FooterMain";
@@ -21,6 +22,7 @@ const App = () => {
       <AboutMeMain />
       <SkillsMain />
       <SubSkill />
+      <ExperienceMain />
       <ProjectsMain />
       <ContactMeMain />
       <FooterMain />
