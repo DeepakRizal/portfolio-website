@@ -24,7 +24,7 @@ const links = [
   },
   {
     link: "Resume",
-    section: "https://drive.google.com/file/d/1zr-qkHVvJcleq6oti0_-oez71wpvisU8/view?usp=sharing",
+    section: "https://drive.google.com/file/d/1rM1_iCbvdFyCdUA_4KC4pc2QGHd4BBBq/view?usp=sharing",
     isExternal: true,
   },
   {

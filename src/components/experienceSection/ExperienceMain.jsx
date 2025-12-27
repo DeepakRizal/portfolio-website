@@ -7,23 +7,43 @@ import { fadeIn } from "../../framerMotion/variants";
 
 const experiences = [
   {
-    title: "Frontend Developer",
-    company: "Flickaroo",
+    title: "Freelance Full Stack Developer",
+    company: "",
     type: "Freelance",
-    duration: "June 2025 - November 2025",
-    location: "Remote",
-    description: "Worked on the frontend development of Flickaroo, Australia's next-generation job platform. Initially built with React and TypeScript, then migrated the entire application to Next.js for improved performance and SEO. Implemented API calls using React Query and axios, managed application state with Redux, and ensured data validation using Zod validation library.",
-    technologies: ["React", "TypeScript", "Next.js", "React Query", "axios", "Zod", "Redux"],
-    website: "https://www.flickaroo.com.au/",
-  },
-  {
-    title: "Frontend Developer",
-    company: "Bedsheet Website",
-    type: "Freelance",
-    duration: "March 2024 - May 2024",
-    location: "Remote",
-    description: "Built a complete responsive bedsheet e-commerce website for a local client using React and TypeScript. Implemented state management with Context API, handled routing with react-router-dom, and integrated API calls using axios. Ensured full responsiveness across all devices.",
-    technologies: ["React", "TypeScript", "react-router-dom", "Context API", "axios", "Tailwind CSS"],
+    duration: "Feb 2025 — Present",
+    location: "",
+    achievements: [],
+    subExperiences: [
+      {
+        company: "Flickaroo — Job Board Platform",
+        duration: "Mar 2025 — Present",
+        website: "https://www.flickaroo.com.au/",
+        achievements: [
+          "Delivered <b>production-ready frontend modules</b> using <b>React, Redux, React Query</b>, and <b>Tailwind CSS</b>.",
+          "Implemented <b>high-performance UI</b> features including infinite scrolling and debounced search inputs.",
+          "Integrated robust form validation using <b>Zod</b> and <b>React Hook Form</b>.",
+        ],
+      },
+      {
+        company: "Koderoo — Business Website",
+        duration: "Feb 2025 — Mar 2025",
+        website: "https://koderoo.com.au",
+        achievements: [
+          "Built a responsive website using <b>HTML, CSS, and JavaScript</b> and migrated the project to <b>WordPress</b>.",
+          "Ensured layout consistency, responsiveness, and performance during migration.",
+        ],
+      },
+      {
+        company: "Beedsheet — Ecommerce Website",
+        duration: "Dec 2024 — Feb 2025",
+        website: "",
+        achievements: [
+          "Built a responsive ecommerce frontend using <b>React</b> and <b>Tailwind CSS</b>.",
+          "Implemented product search, filtering, and reusable UI components for a client-facing storefront.",
+          "Delivered the project as a complete frontend solution for a short-term ecommerce initiative.",
+        ],
+      },
+    ],
   },
 ];
 
@@ -46,18 +66,76 @@ const ExperienceMain = () => {
         {experiences.length > 0 ? (
           <div className="flex flex-col gap-8">
             {experiences.map((experience, index) => (
-              <SingleExperience
-                key={index}
-                title={experience.title}
-                company={experience.company}
-                type={experience.type}
-                duration={experience.duration}
-                location={experience.location}
-                description={experience.description}
-                technologies={experience.technologies}
-                website={experience.website}
-                index={index}
-              />
+              <div key={index} className="flex flex-col gap-4">
+                {/* Main Experience */}
+                <SingleExperience
+                  title={experience.title}
+                  company={experience.company}
+                  type={experience.type}
+                  duration={experience.duration}
+                  location={experience.location}
+                  description={experience.description}
+                  technologies={experience.technologies}
+                  website={experience.website}
+                  achievements={experience.achievements}
+                  index={index}
+                />
+                {/* Sub-Experiences */}
+                {experience.subExperiences && experience.subExperiences.length > 0 && (
+                  <div className="ml-8 mt-2 flex flex-col gap-6">
+                    {experience.subExperiences.map((subExp, subIndex) => (
+                      <motion.div
+                        key={subIndex}
+                        variants={fadeIn("up", 0.2 + (index + subIndex + 1) * 0.1)}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{
+                          once: false,
+                          amount: 0.2,
+                        }}
+                        className="relative pl-8 pb-4 border-l-2 border-cyan/20"
+                      >
+                        {/* Smaller timeline dot */}
+                        <div className="absolute -left-[9px] top-0 w-3 h-3 bg-cyan/60 rounded-full border-2 border-darkBrown"></div>
+                        <div className="flex flex-col gap-2">
+                          {/* Company and Duration */}
+                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                            {subExp.website ? (
+                              <a
+                                href={subExp.website}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-lg text-white font-semibold hover:text-cyan transition-all duration-500 cursor-pointer underline-offset-4 hover:underline"
+                              >
+                                {subExp.company}
+                              </a>
+                            ) : (
+                              <span className="text-lg text-white font-semibold">
+                                {subExp.company}
+                              </span>
+                            )}
+                            <p className="text-cyan text-sm font-special">
+                              {subExp.duration}
+                            </p>
+                          </div>
+                          {/* Achievements */}
+                          {subExp.achievements && subExp.achievements.length > 0 && (
+                            <ul className="text-white mt-2 space-y-1.5 list-disc list-inside text-sm">
+                              {subExp.achievements.map((achievement, achIndex) => (
+                                <li
+                                  key={achIndex}
+                                  className="leading-relaxed"
+                                  dangerouslySetInnerHTML={{ __html: achievement }}
+                                />
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         ) : (

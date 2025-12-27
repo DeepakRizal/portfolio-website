@@ -12,6 +12,7 @@ const SingleExperience = ({
   description,
   technologies,
   website,
+  achievements,
   index,
 }) => {
   return (
@@ -71,6 +72,19 @@ const SingleExperience = ({
         {/* Description */}
         {description && (
           <p className="text-white mt-2 leading-relaxed">{description}</p>
+        )}
+
+        {/* Achievements/Bullet Points */}
+        {achievements && achievements.length > 0 && (
+          <ul className="text-white mt-3 space-y-2 list-disc list-inside">
+            {achievements.map((achievement, achIndex) => (
+              <li
+                key={achIndex}
+                className="leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: achievement }}
+              />
+            ))}
+          </ul>
         )}
 
         {/* Technologies */}
