@@ -15,6 +15,15 @@ const experiences = [
     achievements: [],
     subExperiences: [
       {
+        company: "SUN X — Global Research Consulting",
+        duration: "Dec 2025 — Jan 2026",
+        website: "https://www.sunx.consulting/",
+        achievements: [
+          "Built a responsive website using <b>HTML, CSS, and JavaScript</b>.",
+          "Delivered a properly designed website and logo according to client requirements.",
+        ],
+      },
+      {
         company: "Flickaroo — Job Board Platform",
         duration: "Mar 2025 — Present",
         website: "https://www.flickaroo.com.au/",
@@ -25,9 +34,9 @@ const experiences = [
         ],
       },
       {
-        company: "Koderoo — Business Website",
+        company: "Koderooo — Business Website",
         duration: "Feb 2025 — Mar 2025",
-        website: "https://koderoo.com.au",
+        website: "https://koderooo.com.au",
         achievements: [
           "Built a responsive website using <b>HTML, CSS, and JavaScript</b> and migrated the project to <b>WordPress</b>.",
           "Ensured layout consistency, responsiveness, and performance during migration.",
